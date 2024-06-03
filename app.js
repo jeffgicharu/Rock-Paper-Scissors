@@ -27,11 +27,10 @@ function getHumanChoice() {
         return "scissors";
     }
     else {
-        const error=document.createElement("p");
+        const error=document.createElement("h2");
         const message=document.createTextNode("Please Enter either Rock, Paper or Scissors");
-        try{
-            throw new error
-        }
+        error.appendChild(message);
+        document.body.insertBefore(error,para);
     }
 
 }
