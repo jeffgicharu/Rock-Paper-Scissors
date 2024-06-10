@@ -105,3 +105,12 @@ function addEventListeners(){
     document.getElementById("scissors").addEventListener("click",()=> playRound("scissors"));
 }
 
+// Initialize the game
+function initializeGame(){
+    createElements();
+    updateScore();
+    addEventListeners();
+}
+
+// Start the game
+initializeGame();
