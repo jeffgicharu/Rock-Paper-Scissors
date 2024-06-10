@@ -97,3 +97,11 @@ function resetGame(){
     updateScore();
     displayResult("");
 }
+
+// Ading event listeners to the buttons
+function addEventListeners(){
+    document.getElementById("rock").addEventListener("click",()=> playRound("rock"));
+    document.getElementById("paper").addEventListener("click",()=>playRound("paper"));
+    document.getElementById("scissors").addEventListener("click",()=> playRound("scissors"));
+}
+
