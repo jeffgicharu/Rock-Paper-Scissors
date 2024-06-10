@@ -79,3 +79,14 @@ function updateScore(){
     scoreDiv.textContent=`Human: ${humanScore} - Computer: ${computerScore}`;
 }
 
+// Function to check if there's a winner
+function checkWinner(){
+    if (humanScore === 5) {
+        alert("Congratulations! You won the game!");
+        resetGame();
+      } else if (computerScore === 5) {
+        alert("Sorry, you lost the game.");
+        resetGame();
+      }
+}
+
