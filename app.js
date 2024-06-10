@@ -73,3 +73,9 @@ function playRound(humanChoice){
       checkWinner();
 }
 
+// Function to update the score
+function updateScore(){
+    const scoreDiv=document.getElementById("score");
+    scoreDiv.textContent=`Human: ${humanScore} - Computer: ${computerScore}`;
+}
+
