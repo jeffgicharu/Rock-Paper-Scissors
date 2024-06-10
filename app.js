@@ -90,3 +90,10 @@ function checkWinner(){
       }
 }
 
+// Function to reset the game
+function resetGame(){
+    humanScore=0;
+    computerScore=0;
+    updateScore();
+    displayResult("");
+}
