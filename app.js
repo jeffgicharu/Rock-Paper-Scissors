@@ -51,3 +51,25 @@ function getComputerChoice(){
     return choices[randomIndex];
 }
 
+// Function to play a single round
+function playRound(humanChoice){
+    const computerChoice=getComputerChoice();
+
+    if (humanChoice === computerChoice) {
+        displayResult("It's a tie!");
+      } else if (
+        (humanChoice === "rock" && computerChoice === "scissors") ||
+        (humanChoice === "paper" && computerChoice === "rock") ||
+        (humanChoice === "scissors" && computerChoice === "paper")
+      ) {
+        humanScore++;
+        displayResult(`You win! ${humanChoice.charAt(0).toUpperCase() + humanChoice.slice(1)} beats ${computerChoice}.`);
+      } else {
+        computerScore++;
+        displayResult(`You lose! ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)} beats ${humanChoice}.`);
+      }
+
+      updateScore();
+      checkWinner();
+}
+
