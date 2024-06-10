@@ -23,7 +23,7 @@ function createElements(){
 
     const paperButton=document.createElement("button");
     paperButton.id="paper";
-    paperButton.textContent="Scissors";
+    paperButton.textContent="Paper";
     buttonsContainer.appendChild(paperButton);
 
     const scissorsButton=document.createElement("button");
@@ -71,6 +71,11 @@ function playRound(humanChoice){
 
       updateScore();
       checkWinner();
+}
+
+function displayResult(message){
+    const resultDiv=document.getElementById("result");
+    resultDiv.textContent=message;
 }
 
 // Function to update the score
