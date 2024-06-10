@@ -9,3 +9,5 @@ function getHumanChoice(){
     return choice.toLowerCase();
 }
 
+let humanScore=0;
+let computerScore=0;
