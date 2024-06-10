@@ -32,3 +32,27 @@ function playRound(humanChoice,computerChoice){
         return "computer";
     }
 }
+
+function playGame(){
+    humanScore=0;
+    computerScore=0;
+
+    for(let i=0;i<5;i++){
+        const humanSelection=getHumanChoice();
+        const computerSelection=getComputerChoice();
+        playRound(humanSelection,computerSelection);
+    }
+
+    console.log(`Final scores - Human: ${humanScore}, Computer: ${computerScore}`);
+
+    if(humanScore>computerScore){
+        console.log("Congratulations! You won the game!");
+    } else if(humanScore<computerScore){
+        console.log("Sorry, you lost the game.");
+    } else{
+        console.log("The game is a tie.");
+    }
+}
+
+const btn=document.querySelector("button");
+btn.addEventListener("click",playGame);
